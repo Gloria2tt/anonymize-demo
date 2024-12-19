@@ -9,12 +9,32 @@
 <body>
     <div class="container">
         <h1>Anonymize Demo</h1>
-        <p>The video generated using AVsync15 dataset</p>
-        <div class="video-container">
-            <video controls>
-                <source src="https://www.youtube.com/embed/ID3v5UZx86Q" type="video/mp4">
-                Your browser does not support the video element.
-            </video>
+        <p>Videos generated using AVsync15 dataset</p>
+
+        <div class="video-grid">
+            <div class="video-item">
+                <h2>Original Video</h2>
+                <video controls>
+                    <source src="assets/8fDeRi8Lqyg_000040_000050_6.0_10.0.mp4" type="video/mp4">
+                </video>
+                <p>Original input sequence</p>
+            </div>
+
+            <div class="video-item">
+                <h2>Result 1</h2>
+                <video controls>
+                    <source src="assets/OJqJgotD8D4_000038_000048_4.0_8.5.mp4" type="video/mp4">
+                </video>
+                <p>First anonymization result</p>
+            </div>
+
+            <div class="video-item">
+                <h2>Result 2</h2>
+                <video controls>
+                    <source src="assets/V0QCCLD_0s8_000130_000140_3.0_7.0.mp4" type="video/mp4">
+                </video>
+                <p>Second anonymization result</p>
+            </div>
         </div>
     </div>
 </body>
