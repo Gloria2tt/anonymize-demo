@@ -44,44 +44,14 @@
         .debug-message {
             margin: 5px 0;
         }
-        .error {
-            color: #ff6b6b;
-        }
-        .success {
-            color: #69db7c;
-        }
-        .video-error {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: rgba(255, 0, 0, 0.7);
-            color: white;
-            padding: 5px;
-            font-size: 12px;
-            text-align: center;
-        }
     </style>
     <script>
-        function addDebugMessage(message, isError = false) {
+        function addDebugMessage(message) {
             const debugPanel = document.getElementById('debug-panel');
             const messageDiv = document.createElement('div');
-            messageDiv.className = `debug-message ${isError ? 'error' : 'success'}`;
+            messageDiv.className = 'debug-message';
             messageDiv.textContent = message;
             debugPanel.appendChild(messageDiv);
-            debugPanel.scrollTop = debugPanel.scrollHeight;
-        }
-
-        function logVideoError(video, index, type) {
-            const message = `${type} ${index} load error: ${video.error ? video.error.message : 'Unknown error'}`;
-            addDebugMessage(message, true);
-            
-            // 在视频容器下方显示错误
-            const container = video.parentElement;
-            const errorDiv = document.createElement('div');
-            errorDiv.className = 'video-error';
-            errorDiv.textContent = `Error loading video ${index}`;
-            container.appendChild(errorDiv);
         }
 
         window.onload = function() {
@@ -97,40 +67,40 @@
         <h2>AVSync Videos</h2>
         <div class="video-row">
             <div class="video-container">
-                <video controls onerror="logVideoError(this, 1, 'AVSync')">
-                    <source src="../assets/avsync/video1.mp4" type="video/mp4">
+                <video controls>
+                    <source src="/anonymize-demo/assets/avsync/video1.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>
             <div class="video-container">
-                <video controls onerror="logVideoError(this, 2, 'AVSync')">
-                    <source src="../assets/avsync/video2.mp4" type="video/mp4">
+                <video controls>
+                    <source src="/anonymize-demo/assets/avsync/video2.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>
             <div class="video-container">
-                <video controls onerror="logVideoError(this, 3, 'AVSync')">
-                    <source src="../assets/avsync/video3.mp4" type="video/mp4">
+                <video controls>
+                    <source src="/anonymize-demo/assets/avsync/video3.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>
         </div>
         <div class="video-row">
             <div class="video-container">
-                <video controls onerror="logVideoError(this, 4, 'AVSync')">
-                    <source src="../assets/avsync/video4.mp4" type="video/mp4">
+                <video controls>
+                    <source src="/anonymize-demo/assets/avsync/video4.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>
             <div class="video-container">
-                <video controls onerror="logVideoError(this, 5, 'AVSync')">
-                    <source src="../assets/avsync/video5.mp4" type="video/mp4">
+                <video controls>
+                    <source src="/anonymize-demo/assets/avsync/video5.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>
             <div class="video-container">
-                <video controls onerror="logVideoError(this, 6, 'AVSync')">
-                    <source src="../assets/avsync/video6.mp4" type="video/mp4">
+                <video controls>
+                    <source src="/anonymize-demo/assets/avsync/video6.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>
@@ -139,40 +109,40 @@
         <h2>VGGSound Videos</h2>
         <div class="video-row">
             <div class="video-container">
-                <video controls onerror="logVideoError(this, 1, 'VGGSound')">
-                    <source src="../assets/vggsound/video1.mp4" type="video/mp4">
+                <video controls>
+                    <source src="/anonymize-demo/assets/vggsound/video1.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>
             <div class="video-container">
-                <video controls onerror="logVideoError(this, 2, 'VGGSound')">
-                    <source src="../assets/vggsound/video2.mp4" type="video/mp4">
+                <video controls>
+                    <source src="/anonymize-demo/assets/vggsound/video2.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>
             <div class="video-container">
-                <video controls onerror="logVideoError(this, 3, 'VGGSound')">
-                    <source src="../assets/vggsound/video3.mp4" type="video/mp4">
+                <video controls>
+                    <source src="/anonymize-demo/assets/vggsound/video3.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>
         </div>
         <div class="video-row">
             <div class="video-container">
-                <video controls onerror="logVideoError(this, 4, 'VGGSound')">
-                    <source src="../assets/vggsound/video4.mp4" type="video/mp4">
+                <video controls>
+                    <source src="/anonymize-demo/assets/vggsound/video4.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>
             <div class="video-container">
-                <video controls onerror="logVideoError(this, 5, 'VGGSound')">
-                    <source src="../assets/vggsound/video5.mp4" type="video/mp4">
+                <video controls>
+                    <source src="/anonymize-demo/assets/vggsound/video5.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>
             <div class="video-container">
-                <video controls onerror="logVideoError(this, 6, 'VGGSound')">
-                    <source src="../assets/vggsound/video6.mp4" type="video/mp4">
+                <video controls>
+                    <source src="/anonymize-demo/assets/vggsound/video6.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>
