@@ -19,13 +19,31 @@
         .video-container {
             width: 32%;
             position: relative;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
+            /* 添加固定宽高比 */
+            aspect-ratio: 16/9;
         }
         video {
             width: 100%;
-            height: auto;
+            height: 100%;
             border-radius: 8px;
             background: #f0f0f0;
+            object-fit: cover; /* 保持视频填充整个容器 */
+        }
+        /* 确保最后一行的视频容器也对齐 */
+        .video-row:last-child {
+            margin-bottom: 0;
+        }
+        /* 在较小屏幕上调整布局 */
+        @media (max-width: 768px) {
+            .video-container {
+                width: 48%;
+            }
+        }
+        @media (max-width: 480px) {
+            .video-container {
+                width: 100%;
+            }
         }
         h2 {
             margin: 40px 0 20px;
