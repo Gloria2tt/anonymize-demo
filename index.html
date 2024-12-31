@@ -31,243 +31,95 @@
             margin: 40px 0 20px;
             color: #333;
             text-align: center;
-        }
-        .debug-panel {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: rgba(0, 0, 0, 0.8);
-            color: #fff;
-            padding: 10px;
-            font-family: monospace;
-            max-height: 200px;
-            overflow-y: auto;
-            z-index: 1000;
-        }
-        .debug-message {
-            margin: 5px 0;
-            font-size: 12px;
-        }
-        .error {
-            color: #ff4444;
-            background: rgba(255, 68, 68, 0.1);
-            padding: 5px;
-            border-radius: 4px;
-            margin: 5px 0;
-        }
-        .video-info {
-            font-size: 12px;
-            margin-top: 5px;
-            color: #666;
-        }
-        .test-btn {
-            margin-top: 10px;
-            padding: 5px 10px;
-            background: #007bff;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            margin-right: 10px;
-        }
-        .test-btn:hover {
-            background: #0056b3;
+            font-family: Arial, sans-serif;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h2>AVSync Videos</h2>
-        <div style="text-align: center; margin-bottom: 20px;">
-            <button onclick="testVideoLoading()" class="test-btn">Test Video Loading</button>
-            <button onclick="checkVideoFormats()" class="test-btn">Check Video Formats</button>
-            <button onclick="clearDebug()" class="test-btn">Clear Debug Log</button>
-        </div>
         <div class="video-row">
             <div class="video-container">
-                <video controls onloadeddata="handleVideoLoaded(this)" onloadedmetadata="handleMetadata(this)" onerror="handleVideoError(this)" preload="metadata">
+                <video controls preload="metadata">
                     <source src="./assets/avsync/video1.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
-                <div class="video-info"></div>
             </div>
             <div class="video-container">
-                <video controls onloadeddata="handleVideoLoaded(this)" onloadedmetadata="handleMetadata(this)" onerror="handleVideoError(this)" preload="metadata">
+                <video controls preload="metadata">
                     <source src="./assets/avsync/video2.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
-                <div class="video-info"></div>
             </div>
             <div class="video-container">
-                <video controls onloadeddata="handleVideoLoaded(this)" onloadedmetadata="handleMetadata(this)" onerror="handleVideoError(this)" preload="metadata">
+                <video controls preload="metadata">
                     <source src="./assets/avsync/video3.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
-                <div class="video-info"></div>
             </div>
         </div>
         <div class="video-row">
             <div class="video-container">
-                <video controls onloadeddata="handleVideoLoaded(this)" onloadedmetadata="handleMetadata(this)" onerror="handleVideoError(this)" preload="metadata">
+                <video controls preload="metadata">
                     <source src="./assets/avsync/video4.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
-                <div class="video-info"></div>
             </div>
             <div class="video-container">
-                <video controls onloadeddata="handleVideoLoaded(this)" onloadedmetadata="handleMetadata(this)" onerror="handleVideoError(this)" preload="metadata">
+                <video controls preload="metadata">
                     <source src="./assets/avsync/video5.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
-                <div class="video-info"></div>
             </div>
             <div class="video-container">
-                <video controls onloadeddata="handleVideoLoaded(this)" onloadedmetadata="handleMetadata(this)" onerror="handleVideoError(this)" preload="metadata">
+                <video controls preload="metadata">
                     <source src="./assets/avsync/video6.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
-                <div class="video-info"></div>
             </div>
         </div>
 
         <h2>VGGSound Videos</h2>
         <div class="video-row">
             <div class="video-container">
-                <video controls onloadeddata="handleVideoLoaded(this)" onloadedmetadata="handleMetadata(this)" onerror="handleVideoError(this)" preload="metadata">
+                <video controls preload="metadata">
                     <source src="./assets/vggsound/video1.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
-                <div class="video-info"></div>
             </div>
             <div class="video-container">
-                <video controls onloadeddata="handleVideoLoaded(this)" onloadedmetadata="handleMetadata(this)" onerror="handleVideoError(this)" preload="metadata">
+                <video controls preload="metadata">
                     <source src="./assets/vggsound/video2.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
-                <div class="video-info"></div>
             </div>
             <div class="video-container">
-                <video controls onloadeddata="handleVideoLoaded(this)" onloadedmetadata="handleMetadata(this)" onerror="handleVideoError(this)" preload="metadata">
+                <video controls preload="metadata">
                     <source src="./assets/vggsound/video3.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
-                <div class="video-info"></div>
             </div>
         </div>
         <div class="video-row">
             <div class="video-container">
-                <video controls onloadeddata="handleVideoLoaded(this)" onloadedmetadata="handleMetadata(this)" onerror="handleVideoError(this)" preload="metadata">
+                <video controls preload="metadata">
                     <source src="./assets/vggsound/video4.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
-                <div class="video-info"></div>
             </div>
             <div class="video-container">
-                <video controls onloadeddata="handleVideoLoaded(this)" onloadedmetadata="handleMetadata(this)" onerror="handleVideoError(this)" preload="metadata">
+                <video controls preload="metadata">
                     <source src="./assets/vggsound/video5.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
-                <div class="video-info"></div>
             </div>
             <div class="video-container">
-                <video controls onloadeddata="handleVideoLoaded(this)" onloadedmetadata="handleMetadata(this)" onerror="handleVideoError(this)" preload="metadata">
+                <video controls preload="metadata">
                     <source src="./assets/vggsound/video6.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
-                <div class="video-info"></div>
             </div>
         </div>
     </div>
-
-    <div id="debug-panel" class="debug-panel">
-        <div class="debug-message">Debug Information:</div>
-    </div>
-
-    <script>
-        function addDebugMessage(message) {
-            const debugPanel = document.getElementById('debug-panel');
-            const messageDiv = document.createElement('div');
-            messageDiv.className = 'debug-message';
-            messageDiv.textContent = `[${new Date().toLocaleTimeString()}] ${message}`;
-            debugPanel.appendChild(messageDiv);
-            debugPanel.scrollTop = debugPanel.scrollHeight;
-        }
-
-        function clearDebug() {
-            const debugPanel = document.getElementById('debug-panel');
-            debugPanel.innerHTML = '<div class="debug-message">Debug Information:</div>';
-        }
-
-        function handleVideoLoaded(video) {
-            const source = video.querySelector('source');
-            addDebugMessage(`Video loaded successfully: ${source.src}`);
-            updateVideoInfo(video);
-        }
-
-        function handleMetadata(video) {
-            updateVideoInfo(video);
-        }
-
-        function updateVideoInfo(video) {
-            const infoDiv = video.nextElementSibling;
-            infoDiv.innerHTML = `
-                Duration: ${video.duration.toFixed(2)}s<br>
-                Size: ${video.videoWidth}x${video.videoHeight}<br>
-                Ready State: ${video.readyState}
-            `;
-        }
-
-        function handleVideoError(video) {
-            const source = video.querySelector('source');
-            const errorMessage = video.error ? `Error: ${video.error.message}` : 'Unknown error';
-            addDebugMessage(`Failed to load video: ${source.src}\n${errorMessage}`);
-        }
-
-        function testVideoLoading() {
-            const videos = document.querySelectorAll('video');
-            videos.forEach((video, index) => {
-                const source = video.querySelector('source');
-                fetch(source.src)
-                    .then(response => {
-                        if (response.ok) {
-                            addDebugMessage(`Video ${index + 1} accessible: ${source.src}`);
-                            addDebugMessage(`Content-Type: ${response.headers.get('content-type')}`);
-                            addDebugMessage(`Content-Length: ${response.headers.get('content-length')}`);
-                        } else {
-                            addDebugMessage(`Video ${index + 1} not accessible: ${response.status} ${response.statusText}`);
-                        }
-                    })
-                    .catch(error => {
-                        addDebugMessage(`Error checking video ${index + 1}: ${error.message}`);
-                    });
-            });
-        }
-
-        function checkVideoFormats() {
-            const video = document.createElement('video');
-            const formats = {
-                mp4: 'video/mp4; codecs="avc1.42E01E, mp4a.40.2"',
-                webm: 'video/webm; codecs="vp8, vorbis"',
-                ogg: 'video/ogg; codecs="theora, vorbis"'
-            };
-
-            addDebugMessage('Checking supported video formats:');
-            for (let format in formats) {
-                addDebugMessage(`${format}: ${video.canPlayType(formats[format]) || 'not supported'}`);
-            }
-        }
-
-        window.onload = function() {
-            addDebugMessage('Page loaded. Checking video support...');
-            checkVideoFormats();
-            
-            const videos = document.querySelectorAll('video');
-            videos.forEach((video, index) => {
-                const source = video.querySelector('source');
-                addDebugMessage(`Initializing video ${index + 1}: ${source.src}`);
-            });
-        };
-    </script>
 </body>
 </html>
